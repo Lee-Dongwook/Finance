@@ -20,7 +20,7 @@ export const categories = pgTable("categories", {
   id: text("id").primaryKey(),
   plaidId: text("plaid_id"),
   name: text("name").notNull(),
-  userAgent: text("user_id").notNull(),
+  userId: text("user_id").notNull(),
 });
 
 export const categoriesRelations = relations(categories, ({ many }) => ({
