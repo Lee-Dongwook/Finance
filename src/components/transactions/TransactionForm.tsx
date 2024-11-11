@@ -33,12 +33,12 @@ const apiSchema = insertTransactionSchema.omit({
 });
 
 export type FormValues = z.input<typeof formSchema>;
-export type ApiFromValues = z.input<typeof apiSchema>;
+export type ApiFormValues = z.input<typeof apiSchema>;
 
 export type FormAccountProps = {
   id?: string;
   defaultValues?: FormValues;
-  onSubmit: (values: ApiFromValues) => void;
+  onSubmit: (values: ApiFormValues) => void;
   onDelete: () => void;
   disabled?: boolean;
   accountOptions: { label: string; value: string }[];
